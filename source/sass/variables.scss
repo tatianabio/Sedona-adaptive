@@ -1,0 +1,66 @@
+//Величины вьюпортов
+$tablet-width: 768px;
+$desktop-width: 1200px;
+$mobile-width-only: 767px;
+
+//Высота участка логотипа в хедере, который перекрывает следующую секцию
+$logo-shift: 40px;
+
+:root {
+  //Основной шрифт
+  --basic-font: "PT Sans", "Arial", sans-serif;
+  //Основные цвета проекта
+  --basic-primary: #81b3d2;
+  --basic-secondary: #ffffff;
+  --basic-tertiary: #000000;
+  //Цвета для текста
+  --text-primary: var(--basic-tertiary);
+  --text-primary-hover: var(--basic-primary);
+  --text-primary-active: #b3b3b3;
+  --text-primary-current: #766357;
+  --text-secondary: #333333;
+  --text-inverted: var(--basic-secondary);
+  --text-inverted-hover: var(--text-inverted);
+  --text-inverted-active: rgba(255, 255, 255, 0.3);
+  --text-inverted-disabled: var(--text-inverted);
+  --text-placeholder: rgba(0, 0, 0, 0.3);
+  --text-additional: rgba(51, 51, 51, 0.6);
+  //Цвета для фона
+  --background-primary: var(--basic-secondary);
+  --background-secondary: #eeeeee;
+  --background-tertiary: #f2f2f2;
+  --background-inverted: var(--basic-primary);
+  --background-additional: #e7e5e5;
+  --background-divider-primary: #d6d6d6;
+  --background-divider-secondary: #e5e5e5;
+  --background-divider-tertiary: #d8d8d8;
+  --background-semi-transparent: rgba(0, 0, 0, 0.3);
+  --background-solid: #eaeaea;
+  --background-shadow: rgba(0, 1, 1, 0.2);
+  //Цвета для кнопок
+  --button-primary: var(--basic-primary);
+  --button-primary-hover: #669ec0;
+  --button-primary-active: #5496bd;
+  --button-primary-disabled: #e5e5e5;
+  --button-additional: var(--basic-primary);
+  --button-additional-hover: rgba(129, 179, 210, 0.6);
+  --button-additional-active: rgba(129, 179, 210, 0.3);
+  --button-inverted: var(--basic-secondary);
+  --button-inverted-hover: rgba(255, 255, 255, 0.6);
+  --button-inverted-active: rgba(255, 255, 255, 0.3);
+  --button-shadow-primary: rgba(1, 1, 1, 0.2);
+  --button-shadow-secondary: rgba(255, 255, 255, 0.2);
+  --button-shadow-tertiary: rgba(0, 0, 0, 0);
+  --button-shadow-additional: rgba(0, 0, 0, 0.2);
+  //Цвета для форм
+  --form-primary: #f2f2f2;
+  --form-primary-hover: #e5e5e5;
+  --form-primary-active: var(--basic-secondary);
+  --form-secondary: var(--basic-tertiary);
+  --form-secondary-hover: var(--form-secondary);
+  --form-secondary-active: rgba(51, 51, 51, 0.3);
+  --form-control: var(--form-primary);
+  --form-control-hover: var(--form-primary-hover);
+  --form-control-active: #d5d5d5;
+  --form-additional: #e6e6e6;
+}

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML Academy: Седона</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="./img/favicons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./img/favicons/favicon-apple.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="preload" href="./fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+  <body class="page__body">
+    <div class="page__container">
+      <header class="main-header">
+        <a class="main-header__logo-sedona logo-sedona">
+          <img class="logo-sedona__image" src="./img/logo.svg" alt="Логотип города Седона." width="185" height="96" />
+        </a>
+
+        <nav class="main-navigation main-navigation--closed main-navigation--nojs">
+          <button class="main-navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню.</span>
+          </button>
+
+          <ul class="main-navigation__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link site-list__link--current"> Главная </a>
+            </li>
+
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html"> Фото и видео </a>
+            </li>
+
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html"> Форма отзыва </a>
+            </li>
+
+            <li class="site-list__item">
+              <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+                Html Academy
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="main-container">
+        <header class="main-container__header index-header">
+          <img
+            class="index-header__welcome"
+            src="./img/welcome.svg"
+            alt="Welcome to the gorgeous Sedona: because the Grand Canyon sucks!"
+            width="282"
+            height="214"
+          />
+        </header>
+
+        <section class="profits">
+          <div class="profits__intro">
+            <h1 class="profits__title heading">
+              Седона&nbsp;&mdash; небольшой городок&nbsp;в&nbsp;Аризоне,<br />
+              заслуживающий&nbsp;большего!
+            </h1>
+            <h2 class="profits__sub-title text-description">
+              Рассмотрим 5&nbsp;причин, по&nbsp;которым Седона круче, чем гранд каньон!
+            </h2>
+          </div>
+
+          <ol class="profits__list">
+            <li class="profits__wrapper">
+              <div class="profits__item illustrated-profit">
+                <div class="illustrated-profit__text profit profit--primary profit--decorated profit--real-city">
+                  <h3 class="profit__title heading">
+                    Настоящий&#8196;<br />
+                    городок
+                  </h3>
+                  <span class="profit__serial-number">— №1 —</span>
+                  <p class="profit__description text-description">
+                    Седона не&nbsp;аттракцион для туристов, там течет своя жизнь
+                  </p>
+                </div>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="./img/sedona-city-desktop@1x.webp 1x, ./img/sedona-city-desktop@2x.webp 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="./img/sedona-city-tablet@1x.webp 1x, ./img/sedona-city-tablet@2x.webp 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="./img/sedona-city-phone@1x.webp 1x, ./img/sedona-city-phone@2x.webp 2x"
+                  />
+                  <source
+                    srcset="./img/sedona-city-desktop@1x.jpg 1x, ./img/sedona-city-desktop@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/sedona-city-tablet@1x.jpg 1x, ./img/sedona-city-tablet@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="illustrated-profit__image"
+                    src="./img/sedona-city-phone@1x.jpg"
+                    srcset="./img/sedona-city-phone@2x.jpg 2x"
+                    alt="Улицы Седоны."
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+
+              <h4 class="visually-hidden">
+                Дополнительные преимущества Седоны, подтверждающие, что Седона - настоящий городок.
+              </h4>
+              <ul class="profits__extra-list">
+                <li class="profits__extra-item profit-extra profit-extra--accommodation">
+                  <h5 class="profit-extra__title heading">Жилье</h5>
+                  <p class="profit-extra__description text-description">
+                    Рекомендуем пожить в настоящем мотеле, все как&nbsp;в кино!
+                  </p>
+                </li>
+
+                <li class="profits__extra-item profit-extra profit-extra--food">
+                  <h5 class="profit-extra__title heading">Еда</h5>
+                  <p class="profit-extra__description text-description">
+                    Всегда заказывайте фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!
+                  </p>
+                </li>
+
+                <li class="profits__extra-item profit-extra profit-extra--souvenirs">
+                  <h5 class="profit-extra__title heading">Сувениры</h5>
+                  <p class="profit-extra__description text-description">
+                    Не&nbsp;только китайского,&#8196;<br />
+                    но и местного производства!
+                  </p>
+                </li>
+              </ul>
+            </li>
+
+            <li class="profits__item illustrated-profit illustrated-profit--reversed">
+              <div class="illustrated-profit__text profit profit--primary profit--devil-bridge">
+                <h3 class="profit__title profit__title--devil-bridge heading">
+                  Там есть&#8196;<br />
+                  мост дьявола
+                </h3>
+                <span class="profit__serial-number">— №2 —</span>
+                <p class="profit__description profit__description--devil-bridge text-description">
+                  Да, по&nbsp;нему можно пройти!&#8196;<br />
+                  Если вы осмелитесь, конечно
+                </p>
+              </div>
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="./img/devil-bridge-desktop@1x.webp 1x, ./img/devil-bridge-desktop@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  type="image/webp"
+                  srcset="./img/devil-bridge-tablet@1x.webp 1x, ./img/devil-bridge-tablet@2x.webp 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  type="image/webp"
+                  srcset="./img/devil-bridge-phone@1x.webp 1x, ./img/devil-bridge-phone@2x.webp 2x"
+                />
+                <source
+                  srcset="./img/devil-bridge-desktop@1x.jpg 1x, ./img/devil-bridge-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./img/devil-bridge-tablet@1x.jpg 1x, ./img/devil-bridge-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  class="illustrated-profit__image"
+                  src="./img/devil-bridge-phone@1x.jpg"
+                  srcset="./img/devil-bridge-phone@2x.jpg 2x"
+                  alt="Скалы моста дьявола."
+                  loading="lazy"
+                />
+              </picture>
+            </li>
+
+            <li class="profits__item profit profit--secondary">
+              <h3 class="profit__title heading">
+                Небольшая&#8196;<br />
+                площадь
+              </h3>
+              <span class="profit__serial-number">— №3 —</span>
+              <p class="profit__description text-description">Все интересные места находятся очень близко</p>
+            </li>
+
+            <li class="profits__item profit profit--secondary">
+              <h3 class="profit__title heading">
+                Красивая&#8196;<br />
+                дорога
+              </h3>
+              <span class="profit__serial-number">— №4 —</span>
+              <p class="profit__description text-description">
+                Ехать в&nbsp;Седону из&#8196;<br />Лас-Вегаса совсем не&nbsp;скучно!
+              </p>
+            </li>
+
+            <li class="profits__item profit profit--secondary">
+              <h3 class="profit__title heading">
+                Мало&#8196;<br />
+                туристов
+              </h3>
+              <span class="profit__serial-number">— №5 —</span>
+              <p class="profit__description text-description">
+                Большинство едет в&#8196;<br />
+                Гранд&nbsp;Каньон и&#8196;<br />толпится там
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="search">
+          <div class="search__wrapper">
+            <h2 class="search__title heading">Заинтересовались?</h2>
+            <p class="search__description text-description">
+              Укажите предполагаемые даты поездки,&ensp;<br />
+              и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;Cедоне
+            </p>
+            <a class="search__button button" href="#">Найти гостиницу</a>
+          </div>
+          <iframe
+            class="search__map search__map--nojs"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d456312.8027640059!2d-111.8255564542945!3d34.97996172878132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C%20AZ%2086336%2C%20USA!5e0!3m2!1sen!2sge!4v1660575126513!5m2!1sen!2sge"
+            width="320"
+            height="350"
+            allowfullscreen=""
+            title="Интерактивная карта Седоны и ее окрестностей."
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <img
+            class="search__image-map search__image-map--nojs"
+            src="./img/map@1x.jpg"
+            srcset="./img/map@2x.jpg 2x"
+            alt="Карта Седоны и ее окрестностей."
+            width="1200"
+            height="350"
+            loading="lazy"
+          />
+        </section>
+      </main>
+
+      <footer class="main-footer">
+        <h2 class="visually-hidden">Мы в соцсетях.</h2>
+        <a
+          class="main-footer__link-hashtag link-hashtag"
+          href="https://twitter.com/hashtag/visitsedona"
+          title="Поиск в twitter по тегу #visitsedona"
+          target="_blank"
+        >
+          #visitsedona
+        </a>
+
+        <div class="main-footer__social social">
+          <h3 class="visually-hidden">Связаться с нами в соцсетях.</h3>
+          <ul class="social__list">
+            <li class="social__item">
+              <a
+                class="social__link social-link social-link--vkontakte"
+                href="https://vk.com/htmlacademy"
+                target="_blank"
+              >
+                <span class="visually-hidden">Мы во ВКонтакте.</span>
+                <svg class="social-link__icon" width="24" height="24" aria-hidden="true" focusable="false">
+                  <use xlink:href="./img/icons/sprite.svg#vkontakte"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a class="social__link social-link social-link--telegram" href="https://t.me/htmlacademy" target="_blank">
+                <span class="visually-hidden">Мы в Телеграме.</span>
+                <svg class="social-link__icon" width="24" height="24" aria-hidden="true" focusable="false">
+                  <use xlink:href="./img/icons/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a
+                class="social__link social-link social-link--youtube"
+                href="https://www.youtube.com/htmlacademyru"
+                target="_blank"
+              >
+                <span class="visually-hidden">Мы на Ютубе.</span>
+                <svg class="social-link__icon" width="24" height="24" aria-hidden="true" focusable="false">
+                  <use xlink:href="./img/icons/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <a
+          class="main-footer__copyright copyright"
+          href="https://htmlacademy.ru/intensive/adaptive"
+          target="_blank"
+          aria-label="Сайт HTML-академии."
+        >
+          <span class="copyright__text">Разработано</span>
+          <svg class="copyright__icon" width="27" height="35" role="img" aria-label="Логотип HTML-академии.">
+            <use xlink:href="./img/icons/sprite.svg#logo-academy"></use>
+          </svg>
+        </a>
+      </footer>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

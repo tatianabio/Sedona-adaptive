@@ -1,0 +1,64 @@
+@use "../mixins" as *;
+@use "../variables" as v;
+
+.control {
+  @include text-l-bold(var(--text-primary), none);
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  padding-left: 62px;
+}
+
+.control__mark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  background-color: var(--form-control);
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 46px;
+    height: 46px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--checkbox {
+    border-radius: 4px;
+  }
+
+  &--radio {
+    border-radius: 50%;
+  }
+}
+
+.control__input:hover + .control__mark {
+  background-color: var(--form-control-hover);
+}
+
+.control__input:focus + .control__mark {
+  background-color: var(--form-control-hover);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--basic-primary);
+}
+
+.control__input:active + .control__mark {
+  background-color: var(--form-control-active);
+}
+
+.control__input:checked:active + .control__mark::after {
+  opacity: 0.3;
+}
+
+.control__input[type="checkbox"]:checked + .control__mark::after {
+  background-image: url("../img/icons/checkbox-mark.svg");
+}
+
+.control__input[type="radio"]:checked + .control__mark::after {
+  background-image: url("../img/icons/radio-mark.svg");
+}

@@ -1,0 +1,5 @@
+@use "../mixins" as *;
+
+.text-label {
+  @include text-m-normal(var(--text-secondary));
+}

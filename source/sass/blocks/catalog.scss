@@ -1,0 +1,38 @@
+@use "../mixins" as *;
+@use "../variables" as v;
+
+.catalog__intro-wrapper {
+  @media (max-width: v.$mobile-width-only) {
+    padding: 37px 20px 35px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding: 66px 60px 81px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-top: 97px;
+    padding-bottom: 88px;
+  }
+}
+
+.catalog__title {
+  @media (max-width: v.$mobile-width-only) {
+    margin-bottom: 27px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    @include text-xxl-bold;
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 33px;
+  }
+}
+
+.catalog__description br {
+  @media (max-width: v.$mobile-width-only) {
+    display: none;
+  }
+}

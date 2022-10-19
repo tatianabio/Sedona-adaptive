@@ -1,0 +1,101 @@
+@use "../variables" as v;
+
+.form-review {
+  display: grid;
+
+  @media (min-width: v.$tablet-width) {
+    row-gap: 42px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    row-gap: 48px;
+  }
+}
+
+.form-review__fieldset--control {
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 3px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 8px;
+  }
+}
+
+.form-review__wrapper {
+  position: relative;
+  display: grid;
+
+  @media (min-width: v.$tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 15px;
+    margin-bottom: 6px;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      transform: translateX(50%);
+      content: "";
+      width: 1px;
+      height: 100%;
+      background-color: var(--background-divider-secondary);
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    grid-template-columns: 493px 467px;
+    margin-bottom: 8px;
+
+    &::after {
+      right: 467px;
+    }
+  }
+}
+
+.form-review__remark {
+  display: block;
+
+  @media (max-width: v.$mobile-width-only) {
+    align-self: flex-end;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    margin-left: 20px;
+    padding-top: 5px;
+  }
+}
+
+.form-review__button-wrapper {
+  width: 100%;
+  display: flex;
+
+  @media (max-width: v.$mobile-width-only) {
+    flex-direction: column;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-right: 96px;
+    padding-left: 96px;
+  }
+}
+
+.form-review__button {
+  width: 100%;
+
+  @media (max-width: v.$mobile-width-only) {
+    align-self: center;
+    margin-bottom: 3px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    width: 50%;
+    padding: 18px 30px 14px 18px;
+  }
+}

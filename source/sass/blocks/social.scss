@@ -1,0 +1,24 @@
+@use "../mixins" as *;
+@use "../variables" as v;
+
+.social__list {
+  @include list-style-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social__item {
+  @media (max-width: v.$mobile-width-only) {
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 3px;
+    margin-top: 3px;
+  }
+}
+
+.social__item + .social__item {
+  margin-left: 6px;
+}

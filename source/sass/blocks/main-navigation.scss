@@ -1,0 +1,87 @@
+@use "../variables" as v;
+
+@media (max-width: v.$mobile-width-only) {
+  .main-navigation--closed {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .main-navigation--closed .site-list {
+    display: none;
+  }
+
+  .main-navigation--opened .site-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    z-index: 2;
+  }
+
+  .main-navigation--nojs {
+    position: static;
+    margin-top: v.$logo-shift;
+  }
+
+  .main-navigation--nojs .site-list {
+    display: block;
+  }
+
+  .main-navigation--nojs .main-navigation__toggle {
+    display: none;
+  }
+}
+
+.main-navigation__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  z-index: 3;
+  width: 63px;
+  height: 55px;
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-inverted);
+  border: none;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 63px;
+    height: 55px;
+  }
+
+  &:hover::after {
+    opacity: 0.6;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    display: none;
+  }
+}
+
+.main-navigation--closed .main-navigation__toggle {
+  background-color: var(--background-primary);
+
+  &::after {
+    background-image: url("../img/icons/toggle-menu.svg");
+  }
+}
+
+.main-navigation--opened .main-navigation__toggle {
+  &::after {
+    background-image: url("../img/icons/toggle-close.svg");
+  }
+}

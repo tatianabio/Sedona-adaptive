@@ -1,0 +1,37 @@
+@use "../mixins" as *;
+@use "../variables" as v;
+
+.likes-counter {
+  @include text-m-bold;
+
+  @media (min-width: v.$desktop-width) {
+    color: var(--text-inverted);
+  }
+}
+
+.likes-counter__like-icon {
+  color: var(--background-semi-transparent);
+  display: inline-block;
+  fill: currentColor;
+
+  @media (min-width: v.$desktop-width) {
+    color: inherit;
+  }
+}
+
+.likes-counter__likes-number {
+  display: inline-block;
+  vertical-align: 1px;
+
+  @media (max-width: v.$mobile-width-only) {
+    margin-left: 10px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    margin-left: 7px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-left: 4px;
+  }
+}

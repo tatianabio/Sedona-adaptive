@@ -1,0 +1,23 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  color: var(--text-primary);
+
+  &:hover {
+    color: var(--text-primary-hover);
+  }
+
+  &:active {
+    color: var(--text-primary-active);
+  }
+}
+
+.copyright__text {
+  display: block;
+  margin-right: 12px;
+  max-width: 150px;
+}
+
+.copyright__icon {
+  fill: currentColor;
+}

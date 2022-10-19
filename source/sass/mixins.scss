@@ -1,0 +1,69 @@
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin text-s-normal($color: var(--text-additional), $text-transform: uppercase) {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  color: $color;
+  text-transform: $text-transform;
+}
+
+@mixin text-m-normal($color: var(--text-primary), $text-transform: uppercase) {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color;
+  text-transform: $text-transform;
+}
+
+@mixin text-m-bold($color: var(--text-primary), $text-transform: uppercase) {
+  @include text-m-normal($color, $text-transform);
+  font-weight: 700;
+}
+
+@mixin text-l-bold($color: var(--text-primary), $text-transform: uppercase) {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $color;
+  text-transform: $text-transform;
+}
+
+@mixin text-xl-bold($color: var(--text-primary), $text-transform: uppercase) {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: $color;
+  text-transform: $text-transform;
+}
+
+@mixin text-xxl-bold($color: var(--text-primary), $text-transform: uppercase) {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 26px;
+  color: $color;
+  text-transform: $text-transform;
+}
+
+@mixin text-xxxl-bold($color: var(--text-primary), $text-transform: uppercase) {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  color: $color;
+  text-transform: $text-transform;
+}
+
+@mixin list-style-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

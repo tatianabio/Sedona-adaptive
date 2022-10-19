@@ -1,0 +1,176 @@
+@use "../variables" as v;
+@use "../mixins" as *;
+
+.profit {
+  &--primary {
+    background-color: var(--background-inverted);
+    color: var(--text-inverted);
+  }
+
+  &--primary .profit__title {
+    color: var(--text-inverted);
+  }
+
+  &--primary .profit__description {
+    color: var(--text-inverted);
+  }
+
+  &--secondary {
+    background-color: var(--background-secondary);
+  }
+}
+
+.profit__title {
+  margin-bottom: 11px;
+
+  @media (min-width: v.$tablet-width) {
+    @include text-xl-bold;
+  }
+}
+
+.profit__title br {
+  @media (max-width: v.$mobile-width-only) {
+    display: none;
+  }
+}
+
+.profit__serial-number {
+  display: block;
+  text-align: center;
+
+  @media (max-width: v.$mobile-width-only) {
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: v.$mobile-width-only) {
+  .profit {
+    position: relative;
+    padding: 25px 20px;
+    width: 100%;
+    min-height: 165px;
+
+    &--primary {
+      min-height: 191px;
+      padding-top: 39px;
+      padding-bottom: 35px;
+    }
+
+    &--secondary + &--secondary::after {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      transform: translateX(50%);
+      content: "";
+      width: 88.75%;
+      height: 1px;
+      background-color: var(--background-divider-primary);
+    }
+
+    &--decorated {
+      min-height: 227px;
+      padding-top: 70px;
+      padding-bottom: 40px;
+    }
+
+    &--decorated::after {
+      position: absolute;
+      top: -1px;
+      right: 50%;
+      transform: translateX(50%);
+      content: "";
+      width: 100%;
+      height: 37px;
+      background-image: url("../img/profit-top-decoration.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  .profit--secondary .profit__description {
+    max-width: 248px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: v.$tablet-width) {
+  .profit {
+    width: 33.33%;
+    min-height: 256px;
+    padding: 42px 32px;
+
+    &--primary {
+      width: 100%;
+    }
+
+    &--decorated {
+      padding: 40px 32px;
+    }
+
+    &--devil-bridge {
+      order: 1;
+    }
+  }
+}
+
+@media (min-width: v.$desktop-width) {
+  .profit__description {
+    max-width: 290px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .profit {
+    &--decorated {
+      padding: 46px 32px;
+    }
+
+    &--devil-bridge {
+      padding: 49px 32px;
+    }
+  }
+}
+
+.profit__description br {
+  @media (max-width: v.$mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    display: inline;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: none;
+  }
+}
+
+.profit__description--devil-bridge br {
+  @media (max-width: v.$mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    display: inline;
+  }
+}
+
+.profit__title--devil-bridge br {
+  @media (max-width: v.$mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    display: inline;
+  }
+}

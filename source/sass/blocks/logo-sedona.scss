@@ -1,0 +1,21 @@
+@use "../variables" as v;
+
+.logo-sedona {
+  display: block;
+
+  &[href] {
+    cursor: pointer;
+  }
+
+  &:hover[href] {
+    opacity: 0.8;
+  }
+
+  &:active[href] {
+    opacity: 0.5;
+  }
+}
+
+.logo-sedona__image {
+  display: block;
+}

@@ -1,0 +1,126 @@
+@use "../mixins" as *;
+@use "../variables" as v;
+
+.modal {
+  background-color: var(--background-primary);
+
+  @media (max-width: v.$mobile-width-only) {
+    width: 100%;
+    height: min-content;
+
+    &--hint-error {
+      margin-top: 18vh;
+      padding: 45px 42px 35px;
+    }
+
+    &--hint-success {
+      margin-top: 42vh;
+    }
+  }
+
+  @media (min-width: v.$tablet-width) {
+    &--hint-error {
+      padding: 48px 47px;
+      width: 400px;
+      margin: 22vh auto auto;
+      height: min-content;
+    }
+
+    &--hint-success {
+      width: 640px;
+      margin: 12vh auto auto;
+      height: min-content;
+    }
+  }
+
+  @media (min-width: v.$tablet-width) {
+    &--hint-error {
+      margin-top: 44vh;
+    }
+
+    &--hint-success {
+      margin-top: 25vh;
+    }
+  }
+}
+
+.modal__text-wrapper {
+  @media (max-width: v.$mobile-width-only) {
+    padding: 39px 39px 0;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding: 45px 98px 0;
+  }
+}
+
+.modal__title {
+  @media (max-width: v.$mobile-width-only) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    @include text-xxxl-bold;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 26px;
+  }
+}
+
+.modal__description {
+  @media (max-width: v.$mobile-width-only) {
+    margin-bottom: 28px;
+
+    &--decorated {
+      margin-bottom: 52px;
+    }
+  }
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 48px;
+
+    &--decorated {
+      margin-bottom: 53px;
+    }
+  }
+}
+
+.modal__button {
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-width: v.$mobile-width-only) {
+    min-width: 180px;
+
+    &--decorated {
+      @include text-l-bold(var(--text-inverted));
+      width: 280px;
+    }
+  }
+
+  @media (min-width: v.$tablet-width) {
+    min-width: 272px;
+
+    &--decorated {
+      width: 458px;
+    }
+  }
+}
+
+.modal__button-wrapper {
+  background-color: var(--background-tertiary);
+
+  @media (max-width: v.$mobile-width-only) {
+    padding: 20px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding: 44px 91px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 42px 91px;
+  }
+}

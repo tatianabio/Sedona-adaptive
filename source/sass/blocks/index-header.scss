@@ -1,0 +1,63 @@
+@use "../variables" as v;
+
+.index-header {
+  position: relative;
+  background-color: var(--background-additional);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    content: "";
+    width: 100%;
+    height: 57px;
+    background-image: url("../img/welcome-divider.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 1px 1px 0 var(--background-primary);
+  }
+
+  @media (max-width: v.$mobile-width-only) {
+    min-height: 389px;
+    background-image: url("../img/welcome-background-phone@1x.jpg");
+  }
+
+  @media (min-width: v.$tablet-width) {
+    min-height: 518px;
+    background-image: url("../img/welcome-background-full@1x.jpg");
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .index-header {
+    @media (max-width: v.$mobile-width-only) {
+      background-image: url("../img/welcome-background-phone@2x.jpg");
+      background-size: 901px auto;
+    }
+
+    @media (min-width: v.$tablet-width) {
+      background-image: url("../img/welcome-background-full@2x.jpg");
+      background-size: 1200px auto;
+    }
+  }
+}
+
+.index-header__welcome {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  display: block;
+
+  @media (max-width: v.$mobile-width-only) {
+    transform: translate(50%, -49%);
+  }
+
+  @media (min-width: v.$tablet-width) {
+    width: 460px;
+    height: 350px;
+    transform: translate(50%, -52%);
+  }
+}

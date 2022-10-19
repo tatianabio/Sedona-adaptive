@@ -1,0 +1,66 @@
+@use "../mixins" as *;
+@use "../variables" as v;
+
+.profits__intro {
+  @media (max-width: v.$mobile-width-only) {
+    padding: 32px 20px 16px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding: 48px 60px 55px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 59px 60px 44px;
+  }
+}
+
+.profits__title {
+  @media (max-width: v.$mobile-width-only) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    @include text-xl-bold;
+    margin-bottom: 30px;
+  }
+}
+
+.profits__list {
+  @include list-style-reset;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: v.$tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.profits__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: v.$tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.profits__extra-list {
+  @include list-style-reset;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (max-width: v.$mobile-width-only) {
+    margin-top: 23px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

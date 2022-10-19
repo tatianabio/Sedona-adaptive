@@ -1,0 +1,21 @@
+.social-link {
+  display: grid;
+  place-content: center;
+  width: 48px;
+  height: 48px;
+  color: var(--text-inverted);
+  background-color: var(--button-primary);
+
+  &:hover {
+    background-color: var(--button-primary-hover);
+  }
+
+  &:active {
+    color: var(--text-inverted-active);
+    background-color: var(--button-primary-active);
+  }
+}
+
+.social-link__icon {
+  fill: currentColor;
+}

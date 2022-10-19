@@ -1,0 +1,20 @@
+@use "../variables" as v;
+
+.main-header {
+  position: relative;
+  display: grid;
+  width: 100%;
+}
+
+.main-header__logo-sedona {
+  margin: 0 auto -1*v.$logo-shift;
+  z-index: 1;
+
+  @media (min-width: v.$tablet-width) {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    margin-bottom: 0;
+    transform: translateX(50%);
+  }
+}

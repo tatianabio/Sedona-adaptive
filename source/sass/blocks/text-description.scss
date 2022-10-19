@@ -1,0 +1,7 @@
+@use "../mixins" as *;
+
+.text-description {
+  @include text-m-normal(var(--text-secondary));
+  margin: 0;
+  text-align: center;
+}

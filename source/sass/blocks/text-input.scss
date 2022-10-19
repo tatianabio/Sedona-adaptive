@@ -1,0 +1,30 @@
+@use "../mixins" as *;
+
+.text-input {
+  @include text-l-bold(var(--text-primary), none);
+  width: 100%;
+  border: none;
+  padding: 18px 16px 14px;
+  font-family: var(--basic-font);
+  background-color: var(--form-primary);
+
+  &::placeholder {
+    color: var(--text-placeholder);
+    opacity: 1;
+  }
+
+  &:hover {
+    background-color: var(--form-primary-hover);
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--basic-primary);
+  }
+
+  &:active {
+    background-color: var(--form-primary-active);
+    box-shadow: inset 0 0 0 4px var(--form-primary-hover);
+    outline: none;
+  }
+}

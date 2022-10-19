@@ -1,0 +1,37 @@
+@use "../mixins" as *;
+@use "../variables" as v;
+
+.photo-gallery {
+  @media (min-width: v.$tablet-width) {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.photo-gallery__list {
+  @include list-style-reset;
+  display: grid;
+
+  @media (min-width: v.$tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: v.$desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.photo-gallery__item:nth-child(2n + 3) .card__caption {
+  @media (min-width: v.$tablet-width) {
+    background-color: var(--background-solid);
+  }
+
+  @media (min-width: v.$desktop-width) {
+    background-color: var(--background-semi-transparent);
+  }
+}

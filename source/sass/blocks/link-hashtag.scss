@@ -1,0 +1,15 @@
+@use "../mixins" as *;
+@use "../variables" as v;
+
+.link-hashtag {
+  @include text-xl-bold;
+  display: block;
+
+  &:hover {
+    color: var(--text-primary-hover);
+  }
+
+  &:active {
+    color: var(--text-primary-active);
+  }
+}

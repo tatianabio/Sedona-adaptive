@@ -1,0 +1,40 @@
+@use "../mixins" as *;
+@use "../variables" as v;
+
+.textarea {
+  @include text-l-bold(var(--text-primary), none);
+  width: 100%;
+  display: block;
+  font-family: var(--basic-font);
+  background-color: var(--form-primary);
+  border: none;
+  padding: 16px;
+  resize: none;
+
+  &::placeholder {
+    color: var(--text-placeholder);
+  }
+
+  &:hover {
+    background-color: var(--form-primary-hover);
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--basic-primary);
+  }
+
+  &:active {
+    background-color: var(--form-primary-active);
+    box-shadow: inset 0 0 0 4px var(--form-primary-hover);
+    outline: none;
+  }
+
+  @media (max-width: v.$mobile-width-only) {
+    height: 150px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    height: 160px;
+  }
+}

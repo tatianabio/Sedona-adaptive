@@ -1,0 +1,15 @@
+@use "../mixins" as *;
+@use "../variables" as v;
+
+
+.form-remark {
+  max-width: 300px;
+
+  @media (max-width: v.$mobile-width-only) {
+    @include text-s-normal(var(--text-additional));
+  }
+
+  @media (min-width: v.$tablet-width) {
+    @include text-m-normal(var(--text-additional));
+  }
+}
